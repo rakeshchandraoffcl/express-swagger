@@ -1,0 +1,26 @@
+openapi: '3.0.0'
+info:
+    title: Explore swagger
+    description: A project for exploring swagger documentation
+    version: 1.1.
+    contact:
+        email: rakeshchandra.offcl@gmail.com
+
+# servers:
+#     - url: 'https://localhost:5000/api/v1'
+#       description: For localhost - secure
+#     - url: 'http://localhost:5000/api/v1'
+#       description: For localhost - regular
+
+servers:
+    - url: '{protocol}://localhost:5000/api/{version}'
+      description: For localhost - secure
+      variables:
+          version:
+              enum:
+                  - v1
+                  - v2
+          protocol:
+              enum:
+                  - http
+                  - https
