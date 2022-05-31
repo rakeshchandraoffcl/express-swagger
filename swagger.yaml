@@ -1,4 +1,5 @@
 openapi: '3.0.0'
+# General Details
 info:
     title: Explore swagger
     description: A project for exploring swagger documentation
@@ -24,3 +25,14 @@ servers:
               enum:
                   - http
                   - https
+
+components:
+    securitySchemes:
+        cookieAuth: # arbitrary name for the security scheme; will be used in the "security" key later
+            type: apiKey
+            in: cookie
+            name: token
+        bearerAuth: # arbitrary name for the security scheme
+            type: http
+            scheme: bearer
+            bearerFormat: JWT
