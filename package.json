@@ -1,0 +1,16 @@
+{
+  "name": "swagger",
+  "version": "1.0.0",
+  "description": "A project to explore swagger",
+  "main": "index.js",
+  "author": "Rakesh Chandra Dash",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "swagger-ui-express": "^4.4.0",
+    "yamljs": "^0.3.0"
+  }
+}
